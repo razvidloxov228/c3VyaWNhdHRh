@@ -1,0 +1,13 @@
+let a = Number(prompt("Введіть 1 число: "));
+let b = Number(prompt("Введіть 2 число: "));
+let c = a&b;
+console.log("Результати:");
+console.log(a + " & " + b + " = " + c);
+c = a|b;
+console.log(a + " | " + b + " = " + c);
+c = a^b;
+console.log(a + " ^ " + b + " = " + c);
+c = a<<1;
+console.log(a + " << 1 " + " = " + c);
+c = a>>1;
+console.log(a + " >> 1 " + " = " + c);

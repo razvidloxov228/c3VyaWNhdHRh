@@ -1,0 +1,13 @@
+let a = Number(prompt("Введіть 1 число: "));
+let b = Number(prompt("Введіть 2 число: "));
+let c = a+b;
+console.log("Результати:");
+console.log("Додавання: " + c);
+c = a-b;
+console.log("Віднімання: " + c);
+c = a*b;
+console.log("Множення: " + c);
+c = a/b;
+console.log("Ділення: " + c);
+c = a % b;
+console.log("Залишок від ділення: " + c);
