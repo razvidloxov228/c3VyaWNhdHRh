@@ -1,0 +1,40 @@
+import uvicorn
+from fastapi import FastAPI
+
+app = FastAPI()
+
+# Тимчасове сховище даних
+students_db = {
+    1: {"name": "Іван Петренко", "group": "КІТ-21", "grade": 90},
+    2: {"name": "Марія Коваленко", "group": "КІТ-21", "grade": 85},
+    3: {"name": "Петро Сидоренко", "group": "АВТ-22", "grade": 88}
+}
+
+@app.get("/students")
+def get_all_students():
+    return students_db
+
+@app.get("/students/{student_id}")
+def get_student_by_id(student_id: int):
+    if student_id in students_db:
+        return students_db[student_id]
+    return {"error": "Студента не знайдено"}
+
+@app.get("/students/group/{group_name}")
+def get_students_by_group(group_name: str):
+    result = {}
+    for sid, student in students_db.items():
+        if student["group"] == group_name:
+            result[sid] = student
+    return result
+
+@app.get("/students/grade/{min_grade}")
+def get_students_by_grade(min_grade: int):
+    result = {}
+    for sid, student in students_db.items():
+        if student["grade"] > min_grade:
+            result[sid] = student
+    return result
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

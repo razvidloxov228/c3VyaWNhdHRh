@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Python ПР9</title>
+</head>
+<body style="background-color: #eedfbb;">
+    <h1>Практична робота №2: Введення до FastAPI</h1>
+    <h3>Завдання 1: Встановлення FastAPI та необхідних бібліотек</h3>
+    <ol>
+        <li><img src="images/screenA1.png" alt="скреенА1.пнґ"></li>
+        <li><img src="images/screenA2.png" alt="скреенА2.пнґ"></li>
+        <li><img src="images/screenA3.png" alt="скреенА3.пнґ"></li>
+    </ol>
+    <h3>Завдання 2: Створення першої програми</h3>
+    <ol>
+        <li><img src="images/screenB1.png" alt="скреенБ1.пнґ"><p>Код спершу не запрацював, довелося дописувати вручну.</p></li>
+        <li><img src="images/screenB2.png" alt="скреенБ2.пнґ"></li>
+        <li><img src="images/screenB3.png" alt="скреенБ3.пнґ"></li>
+        <li><img src="images/screenB4.png" alt="скреенБ4.пнґ"></li>
+    </ol>
+    <h4>Відповіді на контрольні питання:</h4>
+    <ol>
+        <li>Кореневий маршрут повертає <code>{"message":"Вітаємо у FastAPI!"}</code></li>
+        <li>На сторінці /docs відкривається автоматично згенерована інтерактивна документація.</li>
+    </ol>
+    <h3>Завдання 3: Робота з різними маршрутами</h3>
+    <ol>
+        <li><img src="images/screenC1.png" alt="скреенЦ1.пнґ"></li>
+        <li><img src="images/screenC2.png" alt="скреенЦ2.пнґ"></li>
+        <li><img src="images/screenC3.png" alt="скреенЦ3.пнґ"></li>
+        <li><img src="images/screenC4.png" alt="скреенЦ4.пнґ"></li>
+    </ol>
+    <h3>Завдання 4: Маршрути з параметрами</h3>
+    <ol>
+        <li><img src="images/screenD2.png" alt="скреенД2.пнґ"></li>
+        <li><img src="images/screenD3.png" alt="скреенД3.пнґ"></li>
+        <li><img src="images/screenD4.png" alt="скреенД4.пнґ"></li>
+        <li><img src="images/screenD5.png" alt="скреенД5.пнґ"></li>
+        <li><img src="images/screenD1.png" alt="скреенД1.пнґ"><p>З текстом він не працює — очікує ціле число.</p></li>
+    </ol>
+    <h3>Завдання 5: Робота з параметрами запиту</h3>
+    <ol>
+        <li><img src="images/screenE1.png" alt="скреенЕ1.пнґ"></li>
+        <li><img src="images/screenE2.png" alt="скреенЕ2.пнґ"></li>
+    </ol>
+    <h3>Завдання 6: Комбінування типів параметрів</h3>
+    <ol>
+        <li><img src="images/screenF1.png" alt="скреенФ1.пнґ"></li>
+        <li><img src="images/screenF2.png" alt="скреенФ2.пнґ"></li>
+        <li><img src="images/screenF3.png" alt="скреенФ3.пнґ"></li>
+        <li><img src="images/screenF4.png" alt="скреенФ4.пнґ"></li>
+    </ol>
+    <h3>Завдання 7: Створення калькулятора (самостійна робота)</h3>
+    <ol>
+        <li><img src="images/screenG1.png" alt="скреенҐ1.пнґ"></li>
+        <li><img src="images/screenG2.png" alt="скреенҐ2.пнґ"></li>
+        <li><img src="images/screenG3.png" alt="скреенҐ3.пнґ"></li>
+        <li><img src="images/screenG4.png" alt="скреенҐ4.пнґ"></li>
+        <li><img src="images/screenG5.png" alt="скреенҐ5.пнґ"></li>
+        <li><img src="images/screenG6.png" alt="скреенҐ6.пнґ"></li>
+        <li><img src="images/screenG7.png" alt="скреенҐ7.пнґ"></li>
+        <li><img src="images/screenG8.png" alt="скреенҐ8.пнґ"></li>
+    </ol>
+    <h3>Завдання 8: Створення API для студентів</h3>
+    <ol>
+        <li><img src="images/screenH1.png" alt="скреенГ1.пнґ"></li>
+        <li><img src="images/screenH2.png" alt="скреенГ2.пнґ"></li>
+        <li><img src="images/screenH3.png" alt="скреенГ3.пнґ"></li>
+        <li><img src="images/screenH4.png" alt="скреенГ4.пнґ"></li>
+    </ol>
+    <h2>Контрольні питання</h2>
+    <ol>
+        <li>FastAPI це сучасний Python‑фреймворк для створення швидких API на Python, який забезпечує автоматичну документацію, валідацію даних і простоту використання.</li>
+        <li><p>Запуск додатку здійснюється командою <code>uvicorn main:app --reload</code></p>
+        <p>Особисто в мене так не вийшло, тому я просто дописав до коду <code>import uvicorn</code></p>
+        <p>та <code>if __name__ == "__main__":</code></p>
+        <p><code>uvicorn.run(app, host="0.0.0.0", port=8000)</code></p></li>
+        <li>Параметр --reload означає, що сервер буде автоматично перезапускатися при зміні коду, що зручно під час розробки.</li>
+        <li>Параметри шляху є частиною URL і обов’язкові (/items/5), тоді як параметри запиту передаються після ? і необов’язкові (/items/5?q=test).</li>
+        <li>Автоматична документація доступна за адресами /docs та /redoc, де можна переглядати та тестувати маршрути.</li>
+        <li>Якщо передати неправильний тип даних у параметр маршруту, FastAPI поверне помилку 422.</li>
+    </ol>
+    <h3>/docs</h3>
+    <ol>
+        <li><img src="images/screenI1.png" alt="скреенІ1.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/screenI2.png" alt="скреенІ2.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+</body>
+</html>

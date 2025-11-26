@@ -1,0 +1,19 @@
+import uvicorn
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/student/{student_id}")
+def get_student(student_id: int):
+    return {
+        "student_id": student_id,
+        "name": f"Студент №{student_id}",
+        "group": "КТ-23"
+    }
+
+@app.get("/greeting/{name}")
+def greet_user(name: str):
+    return {"message": f"Привіт, {name}!"}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
