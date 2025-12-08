@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Python ПР10</title>
+</head>
+<body style="background-color: #eedfbb;">
+    <h1>Практична робота №10: Створення API для управління базою даних з використанням FastAPI та SQLAlchemy</h1>
+    <h3>Завдання 1: Встановлення необхідних бібліотек</h3>
+    <ol>
+        <li><img src="images/A1.png" alt="А1.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/A2.png" alt="А2.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+    <h3>Завдання 2: Створення структури проекту</h3>
+    <ol>
+        <li><img src="images/B1.png" alt="Б1.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+    <h3>Завдання 3: Налаштування бази даних (database.py)</h3>
+    <ol>
+        <li><img src="images/C1.png" alt="Ц1.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+    <h3>Завдання 4: Створення моделей (models.py)</h3>
+    <ol>
+        <li><img src="images/D1.png" alt="Д1.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+    <h3>Завдання 5: Створення API endpoints (main.py)</h3>
+    <ol>
+        <li><img src="images/E1.png" alt="Е1.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+    <h3>Завдання 6: Запуск та тестування API</h3>
+    <ol>
+        <li><img src="images/F1.png" alt="Ф1.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/F2.png" alt="Ф2.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/F3.png" alt="Ф3.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/F4.png" alt="Ф4.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/F5.png" alt="Ф5.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/F6.png" alt="Ф6.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/F7.png" alt="Ф7.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/F8.png" alt="Ф8.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/F9.png" alt="Ф9.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+    <h3>Завдання 7: Самостійна робота - Розширення функціоналу</h3>
+    <ol>
+        <li><img src="images/G1.png" alt="Ґ1.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/G2.png" alt="Ґ2.пнґ" style="width: 740px; height: auto;"></li>
+        <li><img src="images/G3.png" alt="Ґ3.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+    <h3>Завдання 8: Робота з транзакціями</h3>
+    <ol>
+        <li><img src="images/H1.png" alt="Г1.пнґ" style="width: 740px; height: auto;"></li>
+    </ol>
+    <h2>Контрольні питання</h2>
+    <ol>
+        <li>ORM (Object-Relational Mapping) це технологія, що дозволяє працювати з базою даних через об’єкти мови програмування (Python) замість написання SQL‑запитів вручну. Потрібен для:
+            <ul>
+                <li>Спрощення взаємодії з базою даних</li>
+                <li>Підвищення читабельності коду</li>
+                <li>захисту від SQL‑ін’єкцій</li>
+                <li>легкого перенесення між різними СУБД.</li>
+            </ul>
+        </li>
+        <li>Переваги використання SQLAlchemy:
+            <ul>
+                <li>Універсальність: підтримує різні СУБД (SQLite, PostgreSQL, MySQL).</li>
+                <li>Автоматична генерація таблиць із Python‑класів.</li>
+                <li>Вбудована валідація та безпека.</li>
+                <li>Гнучкість: можна комбінувати ORM‑підхід із "чистим" SQL.</li>
+                <li>Зручність у підтримці великих проєктів.</li>
+            </ul>
+        </li>
+        <li>Кожна літера в абревіатурі CRUD означає:
+            <ul>
+                <li>C (Create): створення запису.</li>
+                <li>R (Read): читання даних.</li>
+                <li>U (Update): оновлення запису.</li>
+                <li>D (Delete): видалення запису.</li>
+            </ul>
+        </li>
+        <li>Depends(get_db) потрібно використовувати тому, що Depends(get_db) у FastAPI автоматично створює та закриває сесію бази даних для кожного запиту, а це гарантує:
+            <ul>
+                <li>правильне керування ресурсами</li>
+                <li>відсутність "висячих" з'єднань</li>
+                <li>чистоту коду (менше повторів).</li>
+            </ul>
+        </li>
+        <li>Різниця між PUT та PATCH методами:
+            <ul>
+                <li>PUT: повне оновлення ресурсу (замінює всі поля).</li>
+                <li>PATCH: часткове оновлення (змінює лише передані поля).</li>
+            </ul>
+        </li>
+        <li>Транзакція це набір операцій із БД, які виконуються як єдине ціле. commit() фіксує зміни в БД, робить їх постійними, без commit() зміни залишаються лише у тимчасовій сесії.</li>
+        <li>db.refresh(obj) оновлює об’єкт із актуальними даними з БД після commit.</li>
+        <li>Якщо не викликати db.close(), то сесія залишиться відкритою. Це може призвести до:
+            <ul>
+                <li>витоку ресурсів</li>
+                <li>блокування таблиць</li>
+                <li>зниження продуктивності при великій кількості запитів.</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
